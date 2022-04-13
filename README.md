@@ -1,10 +1,10 @@
 install steps:
 
-1: download the bubishell zip
+1: download the theme zip (ie: bubiflight, dribflight, etc.) 
 
-2: extract the bubishell folder to your betaflight configurator folder
+2: extract the theme folder to your betaflight configurator folder
 
-3: run the .bat file (.sh for linux users) ("sh ./bubishell" for mac) and voila, bubiflight
+3: run the .bat file (.sh for linux users) ("sh ./[themescript]" for mac) and voila, bubiflight
 
 the finished product:
 
