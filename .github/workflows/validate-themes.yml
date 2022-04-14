@@ -1,5 +1,5 @@
 name: output-themes
-on: [push]
+on: [push, workflow_call]
 jobs:
     check-files-exist:
         runs-on: ubuntu-18.04
