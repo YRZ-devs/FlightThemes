@@ -1,7 +1,7 @@
 name: output-themes
 on: [push]
 jobs:
-  check-files-exist:
-    runs-on: ubuntu-latest
-    steps:
+    check-files-exist:
+        runs-on: ubuntu-latest
+        steps:
       
