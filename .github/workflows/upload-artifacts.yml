@@ -22,10 +22,7 @@ jobs:
                 done
             
             - name: Upload Archives as Releases
-              uses: andelf/nightly-release@v0.0.4
+              uses: softprops/actions-gh-release@v1
               with:
-                tag_name: release
                 name: Themes
-                body: Automated export of themes
                 files: tmp/*.zip
-                prerelease: false
