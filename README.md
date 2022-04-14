@@ -1,4 +1,6 @@
-install steps:
+# Betaflight Themes
+
+## Installation
 
 1: download the theme zip (ie: bubiflight, dribflight, etc.) 
 
@@ -9,3 +11,7 @@ install steps:
 the finished product:
 
 ![Screenshot_2022-04-10_22-16-34](https://user-images.githubusercontent.com/95190117/163197837-18959791-8db1-4b55-b2a1-b7cc38274c05.png)
+
+## Creation
+
+Run `python validate.py` to ensure your theme is properly formatted.
