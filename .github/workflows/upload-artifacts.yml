@@ -22,7 +22,7 @@ jobs:
                 done
             
             - name: Upload Archives as Releases
-              uses: softprops/actions-gh-release@v1
+              uses: softprops/action-gh-release@v1
               with:
                 name: Themes
                 files: tmp/*.zip
