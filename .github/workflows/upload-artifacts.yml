@@ -1,5 +1,5 @@
 name: upload-artifacts
-on: push
+on: [push]
 jobs:
     Check-Files-Exist:
         uses: ./.github/workflows/validate-themes.yml
