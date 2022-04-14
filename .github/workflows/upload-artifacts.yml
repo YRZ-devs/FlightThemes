@@ -19,6 +19,7 @@ jobs:
                 for dir in ./*/
                 do
                     if [[ ${dir} == ./tmp/ ]]
+                    then
                         continue
                     fi
                     zip -r ./tmp/theme-${dir:2:${#dir}-3}.zip ${dir}
