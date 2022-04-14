@@ -4,8 +4,28 @@ jobs:
     Check-Files-Exist:
         uses: ./.github/workflows/validate-themes.yml
     
-    upload-artifacts:
+    Upload-Artifacts:
         runs-on: ubuntu-18.04
         needs: Check-Files-Exist
         steps:
-            - run: "echo Uploading artifacts"
+            - name: Checkout 
+              uses: actions/checkout@v3
+              
+            - name: Create a Temporary Directory
+              run: mkdir tmp
+              
+            - name: Compress all Folders into Temp Directory
+              run: |
+                for dir in ./*/
+                do
+                    zip -r ./tmp/theme-${dir}.zip $[dir}
+                done
+            
+            - name: Upload Archives as Releases
+              uses: andelf/nightly-release@v0.0.4
+              with:
+                tag_name: release
+                name: Themes
+                body: Automated export of themes
+                files: tmp/*.zip
+                prerelease: false
