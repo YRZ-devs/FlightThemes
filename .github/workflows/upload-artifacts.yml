@@ -1,0 +1,11 @@
+name: upload-artifacts
+on: push
+jobs:
+    Check-Files-Exist:
+        uses: ./.github/workflows/validate-pr.yml
+    
+    upload-artifacts:
+        runs-on: ubuntu-18.04
+        needs: Check-Files-Exist
+        steps:
+            - run: "echo Uploading artifacts"
