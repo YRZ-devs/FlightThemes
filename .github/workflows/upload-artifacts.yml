@@ -16,9 +16,11 @@ jobs:
               
             - name: Compress all Folders into Temp Directory
               run: |
-                GLOBIGNORE="tmp"
                 for dir in ./*/
                 do
+                    if [[ ${dir} == ./tmp/ ]]
+                        continue
+                    fi
                     zip -r ./tmp/theme-${dir:2:${#dir}-3}.zip ${dir}
                 done
             
