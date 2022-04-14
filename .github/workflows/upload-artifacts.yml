@@ -18,7 +18,7 @@ jobs:
               run: |
                 for dir in ./*/
                 do
-                    zip -r ./tmp/theme-${dir:2}.zip ${dir}
+                    zip -r ./tmp/theme-${dir:2:${#dir}-3}.zip ${dir}
                 done
             
             - name: Upload Archives as Releases
