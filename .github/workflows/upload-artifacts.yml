@@ -16,7 +16,7 @@ jobs:
               
             - name: Compress all Folders into Temp Directory
               run: |
-                for dir in ./*/
+                for dir in ./!(tmp)*/
                 do
                     zip -r ./tmp/theme-${dir:2:${#dir}-3}.zip ${dir}
                 done
