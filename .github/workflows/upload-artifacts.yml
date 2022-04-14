@@ -11,6 +11,11 @@ jobs:
             - name: Checkout 
               uses: actions/checkout@v3
               
+            - name: Generate release tag
+              id: tag
+              run: |
+                echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
+              
             - name: Create a Temporary Directory
               run: mkdir tmp
               
@@ -29,4 +34,5 @@ jobs:
               uses: softprops/action-gh-release@v1
               with:
                 name: Themes
+                tag_name: ${{ steps.tag.outputs.release_tag }}
                 files: tmp/*.zip
