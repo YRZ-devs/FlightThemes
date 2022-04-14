@@ -29,5 +29,4 @@ jobs:
               uses: softprops/action-gh-release@v1
               with:
                 name: Themes
-                tag_name: Release
                 files: tmp/*.zip
